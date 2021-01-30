@@ -5,9 +5,8 @@ const StyledFooter = styled.div`
   background-color: brown;
   position: relative;
   width: 100vw;
-  height: 100px;
+  height: 10vh;
 
-  bottom: 0;
 
 `
 

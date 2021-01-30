@@ -5,7 +5,7 @@ const StyledHeader = styled.div`
   background-color: maroon;
   position: relative;
   width: 100vw;
-  height: 100px;
+  height: 10vh;
 
 `
 
