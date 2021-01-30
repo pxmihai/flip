@@ -1,13 +1,8 @@
-import Background from './components/Background'
-import {MathProvider} from '../src/components/MathContext';
+import Start from './components/Start'
 
 function App() {
     return (
-        <MathProvider>
-            <div className="App">
-                <Background/>
-            </div>
-        </MathProvider>
+        <Start/>
     );
 }
 
