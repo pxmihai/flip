@@ -5,7 +5,7 @@ import {Flip} from "./Flip"
 import {RightBar} from "./RightBar";
 
 const StyledCenter = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 

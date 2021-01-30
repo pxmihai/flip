@@ -5,7 +5,7 @@ const StyledFlip = styled.div`
   display: flex;
   background-color: crimson;
   width: 80vw;
-  height:80vh;
+  height: 80vh;
 `
 
 export const Flip = () => {
