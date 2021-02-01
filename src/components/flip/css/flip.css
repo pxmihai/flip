@@ -10,11 +10,11 @@
     align-items: center;
     font-family: 'Red Hat Text', sans-serif;
     color: white;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .countdown {
     height: 30vh;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .bottom {
     height: 20vh;
@@ -22,7 +22,7 @@
     background-image: url(../img/pattern-hills.svg);
     position: absolute;
     bottom: 0;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display:flex;
     justify-content: center;
     align-items: center;
