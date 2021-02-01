@@ -6,6 +6,7 @@ import './css/flip.css'
 
 const StyledBackground = styled.div`
   background-image: url(${img1});
+  background-color: hsl(235, 16%, 14%);
   position: relative;
 
   width: 100%;
