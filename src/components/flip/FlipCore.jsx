@@ -23,7 +23,6 @@ export const FlipCore = () => {
                     <i className="fab fa-pinterest"></i>
                     <i className="fab fa-instagram"></i>
 
-
                 </div>
             </div>
         </StyledBackground>
