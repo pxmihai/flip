@@ -1,0 +1,31 @@
+.cover{
+    /*background-color: magenta;*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+    .aa{
+        background-color: hsl(235, 16%, 14%);
+        height:20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Red Hat Text', sans-serif;
+        color: white;
+        border:1px solid red;
+
+    }
+    .bb{
+        background-color: hsl(235, 16%, 14%);
+        height:30vh;
+        border:1px solid red;
+    }
+    .cc{
+        /*background-color:blue;*/
+        height:20vh;
+        width:100%;
+        background-image: url(../img/pattern-hills.svg);
+        position: absolute;
+        bottom: 0;
+        border:1px solid red;
+    }

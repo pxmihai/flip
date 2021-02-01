@@ -1,30 +1,29 @@
 import React from "react";
 import styled from 'styled-components'
 import img1 from './img/bg-stars.svg'
-import img2 from './img/pattern-hills.svg'
+
+import './css/flip.css'
 
 const StyledBackground = styled.div`
   background-image: url(${img1});
   position: relative;
+
   width: 100%;
   height: 100%;
 
 `
-const BottomImage = styled.div`
-  background-image: url(${img2});
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  
-`
+
 
 export const FlipCore = () => {
     return (
         <StyledBackground>
-            <div>
-                <div className="aa">launching soon</div>
-                <div className="bb"> flipping clock</div>
-                <div className="cc">logo space</div>
+
+            <div className="cover">
+                <div className="aa">WE'RE LAUNCHING SOON</div>
+                <div className="bb"> </div>
+                <div className="cc">
+
+                </div>
             </div>
         </StyledBackground>
     )
