@@ -22,9 +22,9 @@
     background-repeat: no-repeat;
     background-size: 100% 30vh;
     background-image: url(../img/pattern-hills.svg);
+    border: 1px solid red;
     position: absolute;
     bottom: 0;
-    border: 1px solid red;
     display:flex;
     justify-content: center;
     align-items: center;
