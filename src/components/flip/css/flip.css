@@ -19,13 +19,16 @@
 .bottom {
     height: 20vh;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 30vh;
     background-image: url(../img/pattern-hills.svg);
     position: absolute;
     bottom: 0;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     display:flex;
     justify-content: center;
     align-items: center;
+
 }
 .fab{
     padding-left: 10px;
