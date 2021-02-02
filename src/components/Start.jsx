@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Header} from './Header'
-import {Footer} from './Footer'
-import {Center} from './Center';
+import {Header} from './design/Header'
+import {Footer} from './design/Footer'
+import {Center} from './design/Center';
 
 
 const Start = () => {
