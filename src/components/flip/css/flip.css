@@ -15,6 +15,21 @@
 .countdown {
     height: 30vh;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.flip_label{
+    width:200px;
+    height:200px;
+
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid red;
+    background-color: hsl(235, 16%, 14%);
 }
 .bottom {
     height: 20vh;

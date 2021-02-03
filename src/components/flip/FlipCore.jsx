@@ -17,7 +17,12 @@ export const FlipCore = () => {
 
             <div className="wrapper">
                 <div className="top">WE'RE LAUNCHING SOON</div>
-                <div className="countdown"> </div>
+                <div className="countdown">
+                    <div className="flip_label">days</div>
+                    <div className="flip_label">hours</div>
+                    <div className="flip_label">minutes</div>
+                    <div className="flip_label">seconds</div>
+                </div>
                 <div className="bottom">
                     <i className="fab fa-facebook-square"></i>
                     <i className="fab fa-pinterest"></i>

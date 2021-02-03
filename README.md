@@ -11,5 +11,7 @@ countdown clock options
 
 https://www.cssscript.com/flipping-countdown-clock-javascript-css-countdown-js/
 
+likely candidate
+https://www.cssscript.com/flip-clock-countdown-counter/
 
 
