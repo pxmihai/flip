@@ -47,6 +47,7 @@ export const FlipCore = () => {
         return () => clearInterval(timer)
     });
 
+
     return (
         <StyledBackground>
 
