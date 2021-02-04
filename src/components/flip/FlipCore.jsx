@@ -29,14 +29,24 @@ export const FlipCore = () => {
     useEffect(() => {
         //https://medium.com/create-a-clocking-in-system-on-react/create-a-react-app-displaying-the-current-date-and-time-using-hooks-21d946971556
         let timer = setInterval(() => {
-                setDays(Math.floor(eta / day));
-                setHours(Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-                setMinutes(Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)));
-                setSeconds(Math.floor(eta % (1000 * 60) / 1000));
+                setDays(Math.floor(eta / day).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false}));
+                setHours(Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toLocaleString('en-US', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                }));
+                setMinutes(Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                }));
+                setSeconds(Math.floor(eta % (1000 * 60) / 1000).toLocaleString('en-US', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                }));
             },
             1000)
         return () => clearInterval(timer)
     });
+
 
     return (
         <StyledBackground>
