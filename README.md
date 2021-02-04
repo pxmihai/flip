@@ -1,5 +1,5 @@
 with (https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-/)  
-with (with https://css-tricks.com/the-holy-grail-layout-with-css-grid/)  
+with (https://css-tricks.com/the-holy-grail-layout-with-css-grid/)  
 with (https://guides.github.com/features/mastering-markdown/)  
 with (https://gist.github.com/shaunlebron/746476e6e7a4d698b373)
 
