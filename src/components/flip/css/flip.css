@@ -19,7 +19,7 @@
     align-items: center;
 }
 .flip {
-    width: 200px;
+    width: 150px;
     height: 200px;
     flex-direction: column;
     background-color: hsl(235, 16%, 14%);
