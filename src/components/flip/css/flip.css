@@ -2,73 +2,94 @@
     position: relative;
     width: 100%;
     height: 100%;
+    font-family: 'Red Hat Text', sans-serif;
 }
-
 .top {
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Red Hat Text', sans-serif;
+    letter-spacing: 2px;
     color: white;
-    border: 1px solid red;
 }
-
 .countdown {
     height: 30vh;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
-.flip_label {
+.flip {
     width: 200px;
     height: 200px;
-    flex-direction:column;
-    display: flex;
-    /*justify-content: center;*/
-    align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid red;
+    flex-direction: column;
     background-color: hsl(235, 16%, 14%);
-}
-
-#mess{
-    width:150px;
-    height:70px;
-}
-#days {
-    border: 1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-
+.unit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  hsl(230, 18%, 59%);;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 2px;
+}
+.value {
+    width: 100px;
+    height: 80px;
+    color: hsl(345, 95%, 68%);
+    background: linear-gradient(hsl(236, 25%, 23%) 50%, hsl(236, 21%, 26%) 50%);
+    box-shadow: 0 10px 10px  hsl(234, 17%, 12%);
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0 auto;
+}
+#leftC {
+    height: 8px;
+    width: 5px;
+    background-color: hsl(235, 16%, 14%);
+    position: absolute;
+    top: 45%;
+    left: 0;
+    border-radius: 0 90px 90px 0;
+}
+#rightC {
+    height: 8px;
+    width: 5px;
+    background-color: hsl(235, 16%, 14%);
+    position: absolute;
+    top: 45%;
+    right: 0;
+    border-radius: 90px 0 0 90px;
+}
 .bottom {
     height: 20vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 30vh;
     background-image: url(../img/pattern-hills.svg);
-    border: 1px solid red;
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 .fab {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 20px;
     width: 20px;
-    /*    todo change color before hover*/
+    color: hsl(230, 18%, 59%);
+    font-size: 1.8rem;
 }
-
 .fab:hover {
     text-decoration: none;
     color: hotpink;
