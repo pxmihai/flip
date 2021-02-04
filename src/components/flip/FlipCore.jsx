@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import img1 from './img/bg-stars.svg'
 import './css/flip.css'
@@ -29,16 +29,13 @@ export const FlipCore = () => {
     useEffect(() => {
         //https://medium.com/create-a-clocking-in-system-on-react/create-a-react-app-displaying-the-current-date-and-time-using-hooks-21d946971556
         let timer = setInterval(() => {
-                setDays(days = Math.floor(eta / day));
-                setHours(hours = Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-                setMinutes(minutes = Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)));
-                setSeconds(seconds = Math.floor(eta % (1000 * 60) / 1000));
+                setDays(Math.floor(eta / day));
+                setHours(Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+                setMinutes(Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)));
+                setSeconds(Math.floor(eta % (1000 * 60) / 1000));
             },
             1000)
-        return function cleanup() {
-            clearInterval(timer)
-        }
-
+        return () => clearInterval(timer)
     });
 
     return (
