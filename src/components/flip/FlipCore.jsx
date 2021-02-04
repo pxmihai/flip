@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled from 'styled-components'
 import img1 from './img/bg-stars.svg'
 import './css/flip.css'
@@ -18,14 +18,28 @@ const StyledDaysID = styled.p`
 `
 
 export const FlipCore = () => {
+    let [days, setDays] = useState(0);
+    let [hours, setHours] = useState(0);
+    let [minutes, setMinutes] = useState(0);
+    let [seconds, setSeconds] = useState(0);
+
     let launchDate = new Date("July 10, 2021 16:17:18").getTime();
-    let now= new Date().getTime();
-    let eta=launchDate-now;
-    let day=1000 * 60 * 60 * 24;
-    let days=Math.floor(eta/day);
-    let hours=Math.floor(eta%((1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes=Math.floor(eta%((1000 * 60 * 60)) / (1000 * 60));
-    let seconds=Math.floor(eta%(1000 * 60) / 1000);
+    let now = new Date().getTime();
+    let eta = launchDate - now;
+    let day = 1000 * 60 * 60 * 24;
+    useEffect(() => {
+        let timer = setInterval(() => {
+                setDays(days = Math.floor(eta / day));
+                setHours(hours = Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+                setMinutes(minutes = Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)));
+                setSeconds(seconds = Math.floor(eta % (1000 * 60) / 1000));
+            },
+            1000)
+        return function cleanup() {
+            clearInterval(timer)
+        }
+
+    });
 
     return (
         <StyledBackground>
