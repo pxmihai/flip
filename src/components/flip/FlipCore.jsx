@@ -29,10 +29,19 @@ export const FlipCore = () => {
     useEffect(() => {
         //https://medium.com/create-a-clocking-in-system-on-react/create-a-react-app-displaying-the-current-date-and-time-using-hooks-21d946971556
         let timer = setInterval(() => {
-                setDays(days = Math.floor(eta / day).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
-                setHours(hours = Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
-                setMinutes(minutes = Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
-                setSeconds(seconds = Math.floor(eta % (1000 * 60) / 1000).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
+                setDays(Math.floor(eta / day).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false}));
+                setHours(Math.floor(eta % ((1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toLocaleString('en-US', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                }));
+                setMinutes(Math.floor(eta % ((1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                }));
+                setSeconds(Math.floor(eta % (1000 * 60) / 1000).toLocaleString('en-US', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                }));
             },
             1000)
         return function cleanup() {
@@ -85,14 +94,14 @@ export const FlipCore = () => {
                     </div>
                     <div className="flip">
 
-                            <div  className="value">
-                                <div id="leftC"></div>
-                                {seconds}
-                                <div id="rightC"></div>
-                            </div>
+                        <div className="value">
+                            <div id="leftC"></div>
+                            {seconds}
+                            <div id="rightC"></div>
+                        </div>
 
                         <div class="unit">
-                                <p>SECONDS</p>
+                            <p>SECONDS</p>
                         </div>
                     </div>
 
