@@ -82,14 +82,14 @@ export const FlipCore = () => {
                     </div>
                     <div className="flip">
 
-                            <div  className="value">
-                                <div id="leftC"></div>
-                                {seconds}
-                                <div id="rightC"></div>
-                            </div>
+                        <div className="value">
+                            <div id="leftC"></div>
+                            {seconds}
+                            <div id="rightC"></div>
+                        </div>
 
                         <div class="unit">
-                                <p>SECONDS</p>
+                            <p>SECONDS</p>
                         </div>
                     </div>
 
