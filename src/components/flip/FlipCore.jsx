@@ -11,17 +11,41 @@ const StyledBackground = styled.div`
   height: 100%;
 `
 
+const StyledDaysID = styled.p`
+  background-color: orange;
+
+  //    testing purposes
+`
+
 export const FlipCore = () => {
+    let launchDate = new Date("July 10, 2021 16:17:18").getTime();
+    let now= new Date().getTime();
+    let eta=launchDate-now;
+    let day=1000 * 60 * 60 * 24;
+    let days=Math.floor(eta/day);
+    let hours=Math.floor(eta%((1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes=Math.floor(eta%((1000 * 60 * 60)) / (1000 * 60));
+    let seconds=Math.floor(eta%(1000 * 60) / 1000);
+
     return (
         <StyledBackground>
 
             <div className="wrapper">
                 <div className="top">WE'RE LAUNCHING SOON</div>
                 <div className="countdown">
-                    <div className="flip_label">days</div>
-                    <div className="flip_label">hours</div>
-                    <div className="flip_label">minutes</div>
-                    <div className="flip_label">seconds</div>
+                    <div className="flip_label">
+                        <div>
+                            <p id="days" className="value">{days}</p>
+                        </div>
+                        <div id="mess">
+                            <StyledDaysID>
+                                <p id="days">days</p>
+                            </StyledDaysID>
+                        </div>
+                    </div>
+                    <div className="flip_label">{hours}hours</div>
+                    <div className="flip_label">{minutes}minutes</div>
+                    <div className="flip_label">{seconds}seconds</div>
                 </div>
                 <div className="bottom">
                     <i className="fab fa-facebook-square"></i>
