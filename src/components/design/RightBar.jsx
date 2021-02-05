@@ -7,7 +7,6 @@ const StyledRightBar = styled.div`
   position: relative;
   width: 10vw;
   height: 80vh;
-  
 `
 
 export const RightBar = () => {

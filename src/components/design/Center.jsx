@@ -8,7 +8,6 @@ const StyledCenter = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-
 `
 
 export const Center = () => {

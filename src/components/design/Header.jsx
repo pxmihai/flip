@@ -6,7 +6,6 @@ const StyledHeader = styled.div`
   position: relative;
   width: 100vw;
   height: 10vh;
-
 `
 
 export const Header = () => {
