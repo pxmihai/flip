@@ -12,5 +12,5 @@ see the project live at (https://pxmihai.github.io/flip/)
 
 todo:  
 - [ ] add responsive points
-- [ ] change header footer and sides to core colors
+- [x] change header footer and sides to core colors
 - [ ] move all the css to styled components
