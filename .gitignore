@@ -25,3 +25,6 @@ yarn-error.log*
 # development ide
 .idea
 .eslintcache
+
+# local readme
+what.md

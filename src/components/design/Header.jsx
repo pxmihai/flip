@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
+import {HeaderCore} from "../header/HeaderCore"
 
 const StyledHeader = styled.div`
   background-color: hsl(236, 25%, 23%);
@@ -10,7 +11,10 @@ const StyledHeader = styled.div`
 
 export const Header = () => {
     return (
-        <StyledHeader/>
+        <StyledHeader>
+            <HeaderCore/>
+        </StyledHeader>
+
 
     )
 }

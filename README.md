@@ -7,6 +7,7 @@ with (https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
 maybe (https://reactjsexample.com/tag/layout/)  
 maybe (https://www.cssscript.com/flipping-countdown-clock-javascript-css-countdown-js/)  
 maybe (https://www.cssscript.com/flip-clock-countdown-counter/)
+maybe (https://jsonplaceholder.typicode.com/)
 
 see the project live at (https://pxmihai.github.io/flip/)
 
@@ -14,3 +15,4 @@ todo:
 - [ ] add responsive points
 - [x] change header footer and sides to core colors
 - [ ] move all the css to styled components
+- [ ] header has a component that displays some json
