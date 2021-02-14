@@ -15,7 +15,7 @@ export const FlipCore = () => {
     let [hours, setHours] = useState(0);
     let [minutes, setMinutes] = useState(0);
     let [seconds, setSeconds] = useState(0);
-    let launchDate = new Date("Mar 1, 2021 16:20:00").getTime();
+    let launchDate = new Date("Mar 1, 2021 00:00:00").getTime();
     let now = new Date().getTime();
     let eta = launchDate - now;
     let day = 1000 * 60 * 60 * 24;
