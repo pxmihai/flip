@@ -7,3 +7,5 @@ commence data points entries
 
 
 html in which you have css and javascript => vue, react
+
+npm run build

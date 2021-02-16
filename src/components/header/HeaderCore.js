@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import styled from 'styled-components';
-// import axios from "axios";
+import axios from "axios";
 
 // const StyledHeader=styled.div`
 //   display: flex;
@@ -18,6 +18,7 @@ export const HeaderCore =() => {
         // PUT request using fetch inside useEffect React hook
         const requestOptions = {
             method: 'PUT',
+
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title: 'React Hooks PUT Request Example' })
         };
