@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-// import styled from 'styled-components';
+import React, {useState, useEffect} from 'react';
+import styled from 'styled-components';
 // import axios from "axios";
 
-// const StyledHeader=styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: orange;
-// `
+const StyledHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+`
 
-export const HeaderCore =() => {
+export const HeaderCore = () => {
     // data goes here
 
     const [postId, setPostId] = useState(null);
@@ -18,10 +18,10 @@ export const HeaderCore =() => {
         // PUT request using fetch inside useEffect React hook
         const requestOptions = {
             method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: 'React Hooks PUT Request Example' })
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({title: 'React Hooks PUT Request Example'})
         };
-        fetch('https://jsonplaceholder.typicode.com/posts/1', requestOptions)
+        fetch('https://jsonplaceholder.typicode.com/posts/2', requestOptions)
             .then(response => response.json())
             .then(data => setPostId(data.id));
 
@@ -29,11 +29,12 @@ export const HeaderCore =() => {
     }, []);
 
     return (
-        <div className="card text-center m-3">
-            <h5 className="card-header">PUT Request with React Hooks</h5>
-            <div className="card-body">
-                Returned Id: {postId}!
-            </div>
-        </div>
+
+        <StyledHeader>
+            Value : {postId}
+            </StyledHeader>
+
     );
 }
+
+// https://jasonwatmore.com/post/2020/11/02/react-fetch-http-put-request-examples
