@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-// import axios from "axios";
+import axios from "axios";
 
 const StyledHeader = styled.div`
   display: flex;
@@ -10,33 +10,44 @@ const StyledHeader = styled.div`
 `
 const StyledBox = styled.div`
   display: flex;
-  margin:10px;
-  background-color:tomato;
+  margin: 10px;
+  background-color: tomato;
 `
 
 export const HeaderCore = () => {
     // data goes here
 
-    const [postId, setPostId] = useState(null);
+    const [postId, setPostId] = useState({});
     const [startValue, endValue] = useState(0);
     const [starBit, moveBit] = useState({a: 1, b: 2, c: "potato"})
     const [potato, tomato] = useState("words");
+    const [users, setUsers] = useState({hits: []});
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const {data} = await axios(
+                "https://jsonplaceholder.typicode.com/users"
+            );
+            setUsers({hits: data});
+        };
+        fetchData();
+    }, [setUsers]);
 
 
     useEffect(() => {
         // PUT request using fetch inside useEffect React hook
         endValue("eraser 991");
-        moveBit({c:"erase 99c"});
-        moveBit({a:"erase 99a"});
-        tomato("erase 993")
+        moveBit({c: "erase 99c"});
+        moveBit({a: "erase 99a"});
+
         const requestOptions = {
-            method: 'PUT',
+            method: 'GET',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({title: 'React Hooks PUT Request Example'})
+            // body: JSON.stringify({title: 'React Hooks PUT Request Example'})
         };
-        fetch('https://jsonplaceholder.typicode.com/posts/2', requestOptions)
+        fetch('https://jsonplaceholder.typicode.com/users/3', requestOptions)
             .then(response => response.json())
-            .then(data => setPostId(data.id));
+            .then(data => setPostId(data));
 
         // empty dependency array means this effect will only run once (like componentDidMount in classes)
     }, []);
@@ -45,11 +56,19 @@ export const HeaderCore = () => {
         <div>
             <StyledHeader>
 
-                    <StyledBox>Value : {postId}</StyledBox>
-                    <StyledBox>Value : {startValue}</StyledBox>
-                    <StyledBox>Value : {starBit.a}</StyledBox>
-                    <StyledBox>Value : {potato}</StyledBox>
+                <StyledBox>Value : {postId.title}</StyledBox>
+                <StyledBox>Value : {startValue}</StyledBox>
+                <StyledBox>Value : {starBit.a}</StyledBox>
+                <StyledBox>
 
+                        {users.hits &&
+                        users.hits.map(item => (
+                            <li key={item.id}>
+                                <span>{item.name}</span>
+                            </li>
+                        ))}
+
+                </StyledBox>
 
 
             </StyledHeader>
