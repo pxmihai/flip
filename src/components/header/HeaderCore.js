@@ -19,7 +19,7 @@ export const HeaderCore = () => {
 
     const [postId, setPostId] = useState({});
     const [startValue, endValue] = useState(0);
-    const [starBit, moveBit] = useState({a: 1, b: 2, c: "potato"})
+    const [start, reStart] = useState({a: 1, b: 2, c: "potato"})
     const [potato, tomato] = useState("words");
     const [users, setUsers] = useState({hits: []});
 
@@ -37,8 +37,8 @@ export const HeaderCore = () => {
     useEffect(() => {
         // PUT request using fetch inside useEffect React hook
         endValue("eraser 991");
-        moveBit({c: "erase 99c"});
-        moveBit({a: "erase 99a"});
+        reStart(state => ({ ...state, a: 'tomato' }));
+        tomato("extra words");
 
         const requestOptions = {
             method: 'GET',
@@ -56,17 +56,18 @@ export const HeaderCore = () => {
         <div>
             <StyledHeader>
 
-                <StyledBox>Value : {postId.title}</StyledBox>
+                <StyledBox>Value : {postId.id}</StyledBox>
                 <StyledBox>Value : {startValue}</StyledBox>
-                <StyledBox>Value : {starBit.a}</StyledBox>
+                <StyledBox>Value : {start.a}</StyledBox>
+                <StyledBox>Value : {potato}</StyledBox>
                 <StyledBox>
 
-                        {users.hits &&
-                        users.hits.map(item => (
-                            <li key={item.id}>
-                                <span>{item.name}</span>
-                            </li>
-                        ))}
+                    {users.hits &&
+                    users.hits.map(item => (
+                        <li key={item.id}>
+                            <span>{item.name}</span>
+                        </li>
+                    ))}
 
                 </StyledBox>
 
