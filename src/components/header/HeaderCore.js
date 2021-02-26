@@ -45,7 +45,7 @@ export const HeaderCore = () => {
             headers: {'Content-Type': 'application/json'},
             // body: JSON.stringify({title: 'React Hooks PUT Request Example'})
         };
-        fetch('https://jsonplaceholder.typicode.com/users/3', requestOptions)
+        fetch('https://jsonplaceholder.typicode.com/users/1', requestOptions)
             .then(response => response.json())
             .then(data => setPostId(data));
 
@@ -55,13 +55,11 @@ export const HeaderCore = () => {
     return (
         <div>
             <StyledHeader>
-
                 <StyledBox>Value : {postId.id}</StyledBox>
                 <StyledBox>Value : {startValue}</StyledBox>
                 <StyledBox>Value : {start.a}</StyledBox>
                 <StyledBox>Value : {potato}</StyledBox>
                 <StyledBox>
-
                     {users.hits &&
                     users.hits.map(item => (
                         <li key={item.id}>
