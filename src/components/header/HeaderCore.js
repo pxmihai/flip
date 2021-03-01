@@ -68,8 +68,6 @@ export const HeaderCore = () => {
                     ))}
 
                 </StyledBox>
-
-
             </StyledHeader>
 
 

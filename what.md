@@ -10,3 +10,7 @@ html in which you have css and javascript => vue, react
 
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 https://blog.logrocket.com/axios-or-fetch-api/
+
+
+1 march
+get data from other api sources
